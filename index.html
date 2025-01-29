@@ -4,8 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal Solution using tailwind css and daisy ui</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    
+  <!--   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        .font-garamond {
+            font-family: "EB Garamond", sans-serif;
+        }
+
+        .font-poppines {
+            font-family: "Poppines", sans-serif;
+        }
+
+        /* variables */
+        :root {
+            --dark-1: #111111;
+            --dark-2: #414040;
+            --dark-3: #707070;
+        }
+    </style>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-1': '#ffffff',
+            'dark-2': '#414040',
+            'dark-3': '#707070',
+            
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+
+
+<body class="font-garamond max-w-[1920px] flex flex-col items-center">
+
+    <header class="max-w-6xl w-full flex flex-col gap-8 p-4">
+        <nav class="flex justify-between gap-8">
+            <img src="images/logo2.png" alt="">
+
+            <div class="flex gap-8 items-center">
+                <ul class="hidden lg:flex gap-8">
+                    <li class="text-[var(--dark-3)]"><a class=" " href="#" >Home</a></li>
+                    <li class="text-[var(--dark-3)]"><a href="#" class="inline-flex ">Services <img  src="images/right-arrow.png" alt=""></a></li>
+                    <li class="text-[var(--dark-3)]"><a href="#" class="inline-flex">Cases <img  src="images/right-arrow.png" alt=""></a></li>
+                    <li class="text-[var(--dark-3)]"><a href="#" class="inline-flex">Blog <img  src="images/right-arrow.png" alt=""></a></li>
+                    <li class="text-[var(--dark-3)]"><a href="#" class="inline-flex">Contact Us <img  src="images/right-arrow.png" alt=""></a></li>
+                </ul>
+
+                <div class="hidden sm:block"><button class="btn  bg-[#B68C5A] text-lg font-semibold text-[#ffffff] my-auto">Free Consultation</button></div>
+
+                <div class="lg:hidden "><img src="images/menu.png" alt=""></div>
+            </div>
+
+        </nav>
+
+        <!-- hero section -->
+        <div class="hero rounded-xl" style="background-image: url(images/banner.png);">
+
+            <div class="p-0 sm:p-12 lg:p-20">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-[692px] flex flex-col gap-6">
+            <h1 class=" text-5xl md:text-6xl lg:text-7xl leading-[60px] md:leading-[70px] lg:leading-[85px] font-extrabold">We Provide Effective Legal Solutions</h1>
+            <p class=" font-poppines text-base leading-[26px] text-[#E7E7E7]">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+            </p>
+            <div class="w-full flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <input
+                type="text"
+                placeholder="Type here"
+                class="input input-bordered input-primary max-w-[300px] w-full sm:max-w-[500px] h-[64px] font-poppines text-base leading-[26px] text-[#A0A0A0]" /> 
+                <button class="btn w-full max-w-[150px] h-[64px] bg-[#B68C5A] font-poppines text-xl font-semibold text-[#ffffff] ">Get Started</button>  
+            </div>
+            
+          </div>
+        </div>
+    </div>
+        
+      </div>
+    </header>
+
+    <main class="max-w-6xl w-full flex flex-col gap-8 p-4">
+        <section class="flex flex-col justify-center gap-12 mt-12">
+            <div class="flex flex-col gap-8 text-center">
+                <h2 class="text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[var(--dark-2)]">The Legal Practice Area</h2>
+            <p class="font-poppines text-base leading-[26px] text-[var(--dark-3)]">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+                <div class="flex flex-col gap-6 text-center justify-center items-center border-b-2 p-4">
+                    <figure><img src="images/business.png" alt=""></figure>
+                    <h3 class="text-3xl font-extrabold text-[var(--dark-2)]">Business Law</h3>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <figure><img src="images/Frame.png" alt=""></figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
     
 </body>
 </html>
